@@ -1,14 +1,37 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTH-8>
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <meta charset="UTF-8">
+    <meta name="googlebot" content="noindex"><!--prevent this site show up on google-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test</title>
+    
+    <title>SunriseStation</title>
+    <link rel="icon" href="./img/Ilya.jpg"/>
+    <meta name="theme-color" content="#333399"/>
+
+    <link rel="preload" href="./src/style.css" as="style">
+    <link rel="stylesheet" href="./src/style.css">
   </head>
   <body>
-    <h1>Hello World</h1><br>
-    <a href="https://RPGGamingStation.github.io/AgentSirius">AgentSirius</a><br>
-    <a href="https://sunrisestation.github.io/StoryOfSisterAndFish">StoryOfSisterAndFish</a><br>
-    <a href="https://sunrisestation.github.io/SinOfCherryBlossom/">SinOfCherryBlossom</a><br>
+    <div id="root">
+      <!--https://zh-hant.legacy.reactjs.org/docs/add-react-to-a-website.html-->
+      <!--div id="root"></div-->
+      <div id="header"><h1>SunriseStation</h1><br/></div>
+      <div id="left-side">
+        <h2>遊戲列表</h2><br/>
+        <ul>
+          <a href="https://SunriseStation.github.io/AgentSirius">AgentSirius</a><br/>
+          <a href="https://SunriseStation.github.io/StoryOfSisterAndFish">StoryOfSisterAndFish</a><br/>
+          <a href="https://SunriseStation.github.io/SinOfCherryBlossom/">SinOfCherryBlossom</a><br/>
+        </ul>
+        <!-- 注意：在發佈應用程式前，請把「development.js」替換成「production.min.js」。 -->
+        <!--script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script-->
+      
+        <!-- 載入我們的 React component。-->
+        <!--script src="./js/index.js"></script-->
+        </div>
+    </div>
   </body>
 </html>
