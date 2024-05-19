@@ -1,3 +1,6 @@
+/* @tailwind base; */
+@tailwind components;
+@tailwind utilities;
 
 body {
     color: #f8f8f8;
@@ -8,25 +11,84 @@ body {
     height: 100%;
 }
 
+a {
+    color: #ec77d1;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+
+
 #root {
     background-color: transparent;
 }
 
 #header {
-    background-image: url(../img/Ilya.jpg);
+    @apply flex justify-between items-center px-4 border-b-2;
+    background-image: url(../img/icon/Ilya.jpg);
     padding: 20px 25px 50px 25px;
 }
 
+#main {
+    display: flex;
+}
+
 #left-side {
+    @apply rounded-3xl shadow-[#106ae0] shadow-lg;
     background-color: #090990;
-    box-shadow: 6px 6px 12px 6px #02021a;
+    /* border-radius: 20px; */
+    /* box-shadow: 6px 6px 12px 6px #02021a; */
     box-sizing: border-box;
-    margin: 20px 10px 20px 10px;/*top right bottom left*/
-    padding: 10px 20px 60px 20px;
+    margin: 20px 10px 20px 10px;/* top right bottom left */
+    padding: 20px;
     width: 55%;
 }
 
-a {
-    color: #ec77d1;
+#right-side {
+    @apply rounded-2xl;
+    background-color: #cea23b;
+    /* border-radius: 20px; */
+    box-shadow: 6px 6px 12px 6px #02021a;
     box-sizing: border-box;
+    margin: 20px 10px 20px auto;/* top right bottom left */
+    padding: 20px;
+    width: 20%;
+}
+
+
+
+/*
+for youtube :)
+https://stackoverflow.com/questions/18342536/how-to-hide-the-bar-at-the-top-of-youtube-even-when-mouse-hovers-over-it
+*/
+.embed-hidder {
+    overflow: hidden;
+    max-width: 100%;
+    height: 225px;
+}
+
+.frame-container {
+    position: relative;
+    padding-right: 100%; /* 16:9 */  
+    height: 300%; /* enlarge beyond browser width */
+    top: -100%; /* center */
+}
+
+.frame-container iframe {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+}
+
+/*
+frameBorder abandobed
+https://stackoverflow.com/questions/3601273/html5-and-frameborder
+disable user interact with embed video
+https://stackoverflow.com/questions/59415206/disable-play-pause-button-of-a-youtube-video
+*/
+iframe {
+    border: none;           /* frameBorder="0" is abandobed */
+    /* pointer-events: none;   disable any user interaction */
 }
