@@ -1,5 +1,6 @@
 // import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// eslint-disable-next-line
+import { HashRouter, BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "./Components/Layout";
 import Mainpage from "./Pages/Mainpage";
@@ -9,7 +10,7 @@ import './style.css';
 
 function App() {
 	return(
-		<BrowserRouter>
+		<HashRouter>
 		<Routes>
 			<Route path="/" element={<Layout/>}>
 
@@ -19,7 +20,7 @@ function App() {
 				<Route path="/games" element={<Gamepage/>}/>
 			</Route>
 		</Routes>
-		</BrowserRouter>
+		</HashRouter>
 	);
 }
 
