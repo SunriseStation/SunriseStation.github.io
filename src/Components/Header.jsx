@@ -1,11 +1,18 @@
 // import { useState } from "react";
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import Logo from "../img/Ilya.jpg";
 
 
 
 function Header() {
 	return(
-		<div id="header"><h1>SunriseStation</h1><br/></div>
+		<header id="header">
+			<Link to="/" className="flex" title="主頁">
+				<img src={Logo} className="w-7 h-7 rounded-md"/>
+				<h1 className="text-2xl font-bold font-funny ">SunriseStation</h1>
+            </Link>
+		</header>
 	);
 }
 

@@ -1,0 +1,30 @@
+.game1-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game1-header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.game1-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  margin-top: 20px;
+}
+
+.game1-play-area {
+  flex: 0 0 70%; /* 調整遊玩區域的寬度 */
+  margin-right: 20px;
+}
+
+.game1-music-player {
+  flex: 0 0 25%; /* 調整音樂播放器的寬度 */
+}

@@ -1,27 +1,34 @@
-// import { useState } from "react";
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Link } from "react-router-dom";
-
-import GameLinkList from "./GameLinkList";
-import SongList from "./SongList";
+import { Outlet } from "react-router-dom";
 
 
 
-function Mainpage() {
+function Gamepage() {
     return(
         <>
-            <div id="left-side">
-                <Link to="/">返回主頁</Link>
-                {<GameLinkList/>}
+            <div className="w-full row-content-box-2">
+                {/* Main Game Area */}
+                <main id="game-aria">
+                    <Outlet/>
+                </main>
             </div>
-            
-            <div id="right-side">
-                {<SongList/>}
-            </div>
+
+            {/* Comments Section */}
+            <section className="w-4/5 max-w-4xl bg-black border border-gray-300 rounded-lg mt-8 p-6 shadow-lg">
+                <h2 className="text-xl font-bold text-center text-gray-800">評論區</h2>
+                <div className="mt-4">
+                    {/* <div className="border-b border-gray-300 py-4">
+                        <p><strong>用戶1:</strong> 這個遊戲真有趣！</p>
+                    </div>
+                    <div className="border-b border-gray-300 py-4">
+                        <p><strong>用戶2:</strong> 音樂搭配得很好。</p>
+                    </div> */}
+                    {/* 你可以添加更多評論 */}
+                </div>
+            </section>
         </>
     );
 }
 
 
 
-export default Mainpage;
+export default Gamepage;

@@ -1,6 +1,3 @@
-// import { useState } from "react";
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import SongItem from "./SongItem";
 
 
@@ -16,21 +13,21 @@ const SongData = [
 		id: 2,
 		name: "エロゲソングonピアノ",
 		link: "https://www.youtube-nocookie.com/embed/DlNhPOObCic?playlist=DlNhPOObCic",
-		autoplay: false},
+		autoplay: true
+	},
 ];
 
-const songs = SongData.map((song) => {
-	return(
-		<SongItem
-			key={song.id}
-			SongName={song.name}
-			SongLink={song.link}
-			SongAutoplay={song.autoplay}
-		/>
-	);
-})
-
 function SongList() {
+	const songs = SongData.map((song) => {
+		return(
+			<SongItem
+				key={song.id}
+				SongName={song.name}
+				SongLink={song.link}
+				SongAutoplay={song.autoplay}
+			/>
+		);
+	});
 
 	return(
 		<>

@@ -1,85 +1,132 @@
-/* @tailwind base; */
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-    color: #f8f8f8;
-    background-color: #050550;
-    display: block;
-    margin: 0;
-    width: 100%;
-    height: 100%;
+
+
+/* might be used very often */
+.row-content-box-1 {
+    @apply flex justify-start items-start;
+}
+.row-content-box-2 {
+    @apply flex justify-center items-start;
+}
+.row-content-box-3 {
+    @apply flex justify-end items-start;
+}
+.row-content-box-4 {
+    @apply flex justify-start items-center;
+}
+.row-content-box-5 {
+    @apply flex justify-center items-center;
+}
+.row-content-box-6 {
+    @apply flex justify-end items-center;
+}
+.row-content-box-7 {
+    @apply flex justify-start items-end;
+}
+.row-content-box-8 {
+    @apply flex justify-center items-end;
+}
+.row-content-box-9 {
+    @apply flex justify-end items-end;
 }
 
-a {
-    color: #ec77d1;
-    box-sizing: border-box;
-    word-wrap: break-word;
+.col-content-box-1 {
+    @apply flex flex-col justify-start items-start;
+}
+.col-content-box-2 {
+    @apply flex flex-col justify-start items-center;
+}
+.col-content-box-3 {
+    @apply flex flex-col justify-start items-end;
+}
+.col-content-box-4 {
+    @apply flex flex-col justify-center items-start;
+}
+.col-content-box-5 {
+    @apply flex flex-col justify-center items-center;
+}
+.col-content-box-6 {
+    @apply flex flex-col justify-center items-end;
+}
+.col-content-box-7 {
+    @apply flex flex-col justify-end items-start;
+}
+.col-content-box-8 {
+    @apply flex flex-col justify-end items-center;
+}
+.col-content-box-9 {
+    @apply flex flex-col justify-end items-end;
 }
 
 
 
-#root {
-    background-color: transparent;
-}
+/* id */
 
+/*
+via-blue-950 to-gray-900 have error in specific env 
+https://github.com/tailwindlabs/tailwindcss/issues/8597
+*/
 #header {
-    @apply flex justify-between items-center px-4 border-b-2;
-    background-image: url(./img/Ilya.jpg);
-    padding: 20px 25px 50px 25px;
+    @apply flex w-full bg-gradient-to-b from-cyan-900 to-gray-900 text-white p-4;
+    --tw-gradient-stops: var(--tw-gradient-from), #172554 var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
 #main {
-    display: flex;
+    @apply mt-6 w-full px-10 col-content-box-2;
+}
+
+#game-aria {
+    @apply mt-6 w-8/12 max-w-4xl bg-gray-600 border-2 border-cyan-100 rounded-lg shadow-lg overflow-hidden row-content-box-2;
 }
 
 #left-side {
-    @apply rounded-3xl shadow-[#106ae0] shadow-lg;
-    background-color: #090990;
-    /* border-radius: 20px; */
-    /* box-shadow: 6px 6px 12px 6px #02021a; */
-    box-sizing: border-box;
-    margin: 20px 10px 20px 10px;/* top right bottom left */
-    padding: 20px;
-    width: 55%;
+    @apply mt-6 w-6/12 bg-gradient-to-br from-cyan-800 to-emerald-600 bg-emerald-500 border-2 border-cyan-300 rounded-lg shadow-lg shadow-cyan-200 px-12 py-16 col-content-box-1;
+    min-height: 80vh;
 }
 
 #right-side {
-    @apply rounded-2xl;
-    background-color: #cea23b;
-    /* border-radius: 20px; */
-    box-shadow: 6px 6px 12px 6px #02021a;
-    box-sizing: border-box;
-    margin: 20px 10px 20px auto;/* top right bottom left */
-    padding: 20px;
-    width: 20%;
+    @apply mt-20 w-3/12 col-content-box-4;
 }
 
 
+
+/* class */
+
+.main-container {
+    @apply w-full col-content-box-5;
+    max-height: 80vh; /* 確保嵌入區域不會超出視窗高度的 80% */
+}
+
+.iframe-game {
+    @apply w-full rounded-lg;
+    height: 600px;
+    max-height: 100%; /* 確保 iframe 不會超出容器 */
+}
 
 /*
 for youtube :)
 https://stackoverflow.com/questions/18342536/how-to-hide-the-bar-at-the-top-of-youtube-even-when-mouse-hovers-over-it
 */
 .embed-hidder {
-    overflow: hidden;
-    max-width: 100%;
-    height: 225px;
+    @apply ml-20 w-2/3 bg-gray-600 rounded-lg overflow-hidden;
+    height: 150px;
 }
 
-.frame-container {
+.youtube-container {
     position: relative;
-    padding-right: 100%; /* 16:9 */  
+    padding-right: 100%; /* 16:9 */
     height: 300%; /* enlarge beyond browser width */
     top: -100%; /* center */
 }
 
-.frame-container iframe {
+.iframe-youtube {
+    @apply w-full h-full;
     position: absolute; 
     top: 0;
     left: 0;
-    width: 100%; 
-    height: 100%;
 }
 
 /*
@@ -89,6 +136,13 @@ disable user interact with embed video
 https://stackoverflow.com/questions/59415206/disable-play-pause-button-of-a-youtube-video
 */
 iframe {
-    border: none;           /* frameBorder="0" is abandobed */
+    /* border: none;           frameBorder="0" is abandobed */
     /* pointer-events: none;   disable any user interaction */
 }
+
+
+
+
+
+
+
