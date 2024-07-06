@@ -106,6 +106,10 @@ https://github.com/tailwindlabs/tailwindcss/issues/8597
     max-height: 100%; /* 確保 iframe 不會超出容器 */
 }
 
+.button {
+    @apply bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center;
+}
+
 /*
 for youtube :)
 https://stackoverflow.com/questions/18342536/how-to-hide-the-bar-at-the-top-of-youtube-even-when-mouse-hovers-over-it

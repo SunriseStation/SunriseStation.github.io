@@ -4,44 +4,59 @@
 const GameData = [
 	// {
 	// 	id: 1,	name: "SiriusAndTheWeirdLover", title: "契約紋",
-	// 	link: "/games/SiriusAndTheWeirdLover",
-	// 	embed: "https://SunriseStation.github.io/SiriusAndTheWeirdLover",
+	// 	page: "/games/SiriusAndTheWeirdLover",
+	// 	link: "https://SunriseStation.github.io/SiriusAndTheWeirdLover",
 	// },
 	{
-		id: 2, name: "StoryOfSisterAndFish", title: "契約紋",
-		link: "/games/StoryOfSisterAndFish",
-		embed: "https://SunriseStation.github.io/StoryOfSisterAndFish",
+		id: 2, name: "StoryOfSisterAndFish", title: "恩妮希雅",
+		page: "/games/StoryOfSisterAndFish",
+		link: "https://SunriseStation.github.io/StoryOfSisterAndFish",
 	},
 	{
 		id: 3, name: "MagicalBlueStar", title: "蒼藍星",
-		link: "/games/MagicalBlueStar",
-		embed: "https://SunriseStation.github.io/StoryOfSisterAndFish",
+		page: "/games/MagicalBlueStar",
+		link: "https://SunriseStation.github.io/MagicalBlueStar",
 	},
 	{
 		id: 4, name: "SinOfCherryBlossom", title: "神櫻姬",
-		link: "/games/SinOfCherryBlossom",
-		embed: "https://SunriseStation.github.io/SinOfCherryBlossom",
+		page: "/games/SinOfCherryBlossom",
+		link: "https://SunriseStation.github.io/SinOfCherryBlossom",
 	},
 	// {
 	// 	id: 5, name: "TheOtherOne", title: "",
-	// 	link: "/games/TheOtherOne",
-	// 	embed: "https://SunriseStation.github.io/TheOtherOne",
+	// 	page: "/games/TheOtherOne",
+	// 	link: "https://SunriseStation.github.io/TheOtherOne",
 	// },
 	{
 		id: 6, name: "TheMotherAndDaughtersMelon", title: "灼炎的巫女",
-		link: "/games/TheMotherAndDaughtersMelon",
-		embed: "https://SunriseStation.github.io/TheMotherAndDaughtersMelon",
+		page: "/games/TheMotherAndDaughtersMelon",
+		link: "https://SunriseStation.github.io/TheMotherAndDaughtersMelon",
 	},
 	// {
 	// 	id: 7, name: "Addiction", title: "",
-	// 	link: "/games/Addiction",
-	// 	embed: "https://SunriseStation.github.io/Addiction",
+	// 	page: "/games/Addiction",
+	// 	link: "https://SunriseStation.github.io/Addiction",
 	// },
 	// {
 	// 	id: 8, name: "BlowMonster", title: "",
-	// 	link: "/games/BlowMonster",
-	// 	embed: "https://SunriseStation.github.io/BlowMonster",
+	// 	page: "/games/BlowMonster",
+	// 	link: "https://SunriseStation.github.io/BlowMonster",
 	// },
+	{
+		id: 9, name: "ElectorWarface", title: "神代伊月",
+		page: "/games/ElectorWarface",
+		link: "https://SunriseStation.github.io/ElectorWarface",
+	},
+	{
+		id: 10, name: "LastNightMemory", title: "樂園之阿媞密絲",
+		page: "/games/LastNightMemory",
+		link: "https://SunriseStation.github.io/LastNightMemory",
+	},
+	{
+		id: 11, name: "FallenInSodom", title: "焰發的瑪琪娜",
+		page: "/games/FallenInSodom",
+		link: "https://SunriseStation.github.io/FallenInSodom",
+	},
 ];
 
 

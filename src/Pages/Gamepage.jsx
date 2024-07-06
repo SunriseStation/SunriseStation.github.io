@@ -1,16 +1,24 @@
 import { Outlet } from "react-router-dom";
 
+import FileEditor from "../Components/FileEditor";
+
 
 
 function Gamepage() {
     return(
         <>
-            <div className="w-full row-content-box-2">
+            <div className="w-full col-content-box-2">
                 {/* Main Game Area */}
                 <main id="game-aria">
-                    <Outlet/>
+                    
+                    <div className="main-container">
+                        <Outlet/>
+                    </div>
                 </main>
+                
+                {<FileEditor/>}
             </div>
+
 
             {/* Comments Section */}
             <section className="w-4/5 max-w-4xl bg-black border border-gray-300 rounded-lg mt-8 p-6 shadow-lg">
