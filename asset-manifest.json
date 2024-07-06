@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.cf7aec6f.css",
-    "main.js": "/static/js/main.c17dcef6.js",
+    "main.css": "/static/css/main.7bf1b578.css",
+    "main.js": "/static/js/main.f3e9a840.js",
     "static/media/Ilya.jpg": "/static/media/Ilya.be3ad6fa8b272d01e233.jpg",
     "index.html": "/index.html",
-    "main.cf7aec6f.css.map": "/static/css/main.cf7aec6f.css.map",
-    "main.c17dcef6.js.map": "/static/js/main.c17dcef6.js.map"
+    "main.7bf1b578.css.map": "/static/css/main.7bf1b578.css.map",
+    "main.f3e9a840.js.map": "/static/js/main.f3e9a840.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf7aec6f.css",
-    "static/js/main.c17dcef6.js"
+    "static/css/main.7bf1b578.css",
+    "static/js/main.f3e9a840.js"
   ]
 }
