@@ -8,6 +8,7 @@ import Mainpage from "./Pages/Mainpage";
 import Gamepage from "./Pages/Gamepage";
 import EmbedGame from "./Components/EmbedGame";
 import Transpage from "./Pages/Transpage";
+import Texteditpage from "./Pages/Texteditpage";
 
 import './style.css';
 
@@ -32,6 +33,7 @@ function App() {
 				</Route>
 				<Route path="/password" element={<Testpage/>}/>
 				<Route path="/tools/trans" element={<Transpage/>}/>
+				<Route path="/tools/edit" element={<Texteditpage/>}/>
 			</Route>
 		</Routes>
 		</HashRouter>

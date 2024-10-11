@@ -70,12 +70,12 @@ via-blue-950 to-gray-900 have error in specific env
 https://github.com/tailwindlabs/tailwindcss/issues/8597
 */
 #header {
-    @apply flex w-full bg-gradient-to-b from-cyan-900 to-gray-900 text-white p-4;
+    @apply flex w-full p-4 bg-gradient-to-b from-cyan-900 to-gray-900 text-white;
     --tw-gradient-stops: var(--tw-gradient-from), #172554 var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
 #main {
-    @apply mt-6 w-full px-10 col-content-box-2;
+    @apply mt-6 w-full px-10 col-content-box-2 z-0;
 }
 
 #game-aria {
@@ -83,12 +83,49 @@ https://github.com/tailwindlabs/tailwindcss/issues/8597
 }
 
 #left-side {
-    @apply mt-6 w-6/12 bg-gradient-to-br from-cyan-800 to-emerald-600 bg-emerald-500 border-2 border-cyan-300 rounded-lg shadow-lg shadow-cyan-200 px-12 py-16 col-content-box-1;
-    min-height: 80vh;
+    /* position, size, element layout */
+    @apply relative my-6;
+    @apply w-6/12 min-h-[80vh];
+    @apply px-12 py-16 col-content-box-1;
+
+    /* colour, appearence */
+    @apply bg-gradient-to-br from-cyan-800 to-emerald-600 bg-emerald-500;
+    /* @apply border-2 border-cyan-300 shadow-lg shadow-cyan-200; */
+    @apply rounded-lg before:blur-lg before:opacity-50;
+}
+
+#left-side::before, #left-side::after {
+    /* position, size, element layout */
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+    @apply w-full h-full;
+    @apply content-[""];
+
+    /* colour, appearence */
+    @apply p-[1.5px] box-content border-animation;
+    @apply z-[-1] rounded-lg;
+
+    /* background-color: rgb(137, 43, 226); */
+    /* background-image: conic-gradient(
+        rgb(0, 251, 255),
+        rgb(255, 213, 0),
+        rgb(0, 251, 255)
+    ); */
 }
 
 #right-side {
-    @apply mt-20 w-3/12 col-content-box-4;
+    @apply sticky my-20 ml-20 top-10 w-2/12 col-content-box-4;
+    @apply before:blur-lg before:opacity-50;
+}
+
+#right-side::before, #right-side::after {
+    /* position, size, element layout */
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+    @apply w-full h-full;
+    @apply content-[""];
+
+    /* colour, appearence */
+    @apply p-[1.5px] box-content border-animation;
+    @apply z-[-1] rounded-lg;
 }
 
 
@@ -110,13 +147,41 @@ https://github.com/tailwindlabs/tailwindcss/issues/8597
     @apply bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center;
 }
 
+/* https://www.youtube.com/watch?v=ezP4kbOvs_E */
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+.border-animation {
+    background-image: conic-gradient(
+        from var(--angle),
+        rgb(0, 251, 255),
+        rgb(255, 213, 0),
+        rgb(0, 251, 255)
+        /* transparent,
+        rgb(132, 0, 255) 50%,
+        transparent 51%,
+        rgb(132, 0, 255) */
+    );
+    animation: spin 10s linear infinite;
+}
+
 /*
 for youtube :)
 https://stackoverflow.com/questions/18342536/how-to-hide-the-bar-at-the-top-of-youtube-even-when-mouse-hovers-over-it
 */
 .embed-hidder {
-    @apply ml-20 w-2/3 bg-gray-600 rounded-lg overflow-hidden;
-    height: 150px;
+    @apply w-full bg-gray-600 rounded-lg overflow-hidden;
+    height: 136px;
 }
 
 .youtube-container {

@@ -24,7 +24,7 @@ function GameLinkList() {
 			<div className="ml-2 text-blue-100">
 				{/* 嵌入好像有點問題:/<br/>
 				先收著<br/> */}
-				{gameLinks}
+				{/* {gameLinks} */}
 			</div>
 		</>
 	);
